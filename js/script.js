@@ -1,4 +1,4 @@
-// // declearing function
+// declearing function
 // function printName() {
 //   return "Hi there";
 // }
