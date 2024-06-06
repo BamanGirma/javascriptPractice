@@ -40,5 +40,48 @@ var score = 76;
 let result = score >= pass ? "passsed" : "failed";
 console.log(result);
 
-a=5;
-console.log(typeof(a));
+function add(a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    return "this is not a number";
+  }
+  var c = a + b;
+  return c;
+}
+
+var sum = add(5, 10);
+console.log(sum);
+
+//
+function incrementOne(a) {
+  if (isNaN(a) == true){
+      return "this is string, please enter an integer";
+  } 
+   a+=1; 
+   return a;
+}
+var res = incrementOne(2);
+console.log(res);
+
+// 
+function tringleArea(b,h){
+    if (isNaN(b) || isNaN(h)) {
+      return "this is string, please enter an integer";
+    }
+    let area = (b*h)/2;
+    return area;
+}
+    let calTriangleArea = tringleArea(10, 2);
+    console.log(calTriangleArea);
+    // 
+    function animal(chickens,cows,pigs){
+      if(isNaN(chickens) && isNaN(cows) && isNaN(pigs)){
+        return "this is a string, please enter an integer"
+      }
+      let chickensLeg = 2* chickens;
+      let cowsLegs= 4* cows;
+      let pigsLegs=4*pigs;
+      let totalLegs = chickensLeg + cowsLegs + pigsLegs;
+      return totalLegs;
+    }
+    let totalResults= animal(2,3,5);
+    console.log(totalResults);
