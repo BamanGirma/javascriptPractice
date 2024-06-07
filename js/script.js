@@ -97,12 +97,55 @@ const results = threeTimesFirstElement([4, 5]);
 console.log(results); // Outputs: 12
 // question eleven
 function isSameNum(num1, num2) {
-  var res="";
-  var res = (num1 === num2) ? "true" : "false";
-  return res;
+  if (typeof num1 == "number" && typeof num2 == "number") {
+    var res = "";
+    res = num1 === num2 ? "true" : "false";
+    return res;
+  } else {
+    return "this is string, please enter a integer";
+  }
 }
-let ans = isSameNum("2", 2);
+let ans = isSameNum(2, 2);
 console.log(ans);
 
 //question 12
+function divisable(num) {
+  if (typeof num != "number") {
+    return "this is string, please enter a integer";
+  } else {
+    let b = "";
+    b = num % 100 === 0 ? "true" : "false";
+    return b;
+  }
+}
+let quotient = divisable(100);
+console.log(quotient);
 
+// question 14
+function isEvenOrOdd(num) {
+  if (typeof num != "number") {
+    return "this is string, please enter a integer";
+  } else {
+    let c = num % 2 === 0 ? "even" : "odd";
+    return c;
+  }
+}
+let evenodd = isEvenOrOdd(4);
+console.log(evenodd);
+
+// question 15
+
+function grade(score) {
+  if (score < 0 && score > 100) {
+    return "invalid score";
+  } else if (score >= 90 && score <= 100) {
+    return "Grade A";
+  } else if (score >= 80 && score <= 89) {
+    return "Grade B";
+  }
+  else{
+    return "Grade C";
+  }
+}
+let mark = grade(20);
+console.log(mark);
